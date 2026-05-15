@@ -25,7 +25,7 @@ Towary w koszyku powinny być posegregowane malejąco według ceny,
 a potem według kolejności alfabetycznej nazw produktów. 
 Sposób sortowania może produktów może się zmieniać w trakcie działania programu. 
 
-Twoim zadaniem jest zaimplementowanie logiki, operującej na obiektach typu ``Product``, 
+Twoim zadaniem jest zaimplementowanie logiki, operującej na obiektach typu ``product.product``, 
 która umożliwiałaby:
 1. Wyszukiwanie najtańszego/najdroższego produktu w zadanej kolekcji produktów
 2. Wyszukiwanie n najtańszych/najdroższych produktów w zadanej kolekcji produktów
@@ -35,7 +35,7 @@ która umożliwiałaby:
 6. Umożliwiać dodawanie nowych promocji, o jeszcze nieznanych cechach, z zachowaniem zasad SOLID
 7. *(Zadanie dodatkowe, +3 pkt)* Proponować najkorzystniejszy sposób stosowania promocji — porównać wyniki zastosowania promocji w różnej kolejności i wybrać wariant najkorzystniejszy dla klienta.
 
-Cechy związane z klasą ``Product``:
+Cechy związane z klasą ``product.product``:
 - kod produktu (code) - String
 - nazwa produktu (name) - String
 - cena produktu (price) – double
@@ -49,7 +49,7 @@ typ ``double`` jest **nieodpowiedni** ze względu na błędy precyzji arytmetyki
 lub operuje na kwotach wyrażonych w groszach (typ ``long``).
 
 W pierwszej wersji rozwiązania użyj **tablicy produktów** jako kolekcji, na której będziesz operował. 
-Następnie dokonaj **refaktoryzacji** kodu, zamieniając tablicę na ``List<Product>``. 
+Następnie dokonaj **refaktoryzacji** kodu, zamieniając tablicę na ``List<product.product>``. 
 Zwróć uwagę, jak zmiana struktury danych wpływa na pozostały kod -
 to ćwiczenie z zasady *Open/Closed Principle* i programowania do interfejsów.
 
@@ -73,7 +73,7 @@ Planując mechanizm sortowania zwróć uwagę na [Dependency Inversion Principle
 interfejsy dostępne w Java: ``Comparable`` oraz ``Comparator``.
 
 ### Uwaga 4
-Zadbaj o poprawną **enkapsulację** — rozważ, czy klasa ``Product`` powinna być mutowalna, 
+Zadbaj o poprawną **enkapsulację** — rozważ, czy klasa ``product.product`` powinna być mutowalna, 
 czy niemutowalna (immutable). Uzasadnij decyzję.
 
 ### Uwaga 5
